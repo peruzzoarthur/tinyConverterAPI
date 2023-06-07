@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exchange Rate Graph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Exchange Rate Graph</h1>
+    <form id="conversionForm">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <label for="base">Base Currency:</label>
+        <input type="text" id="base" name="base" required list="symbolList">
+        <br>
+        <label for="symbols">Exchange Currency:</label>
+        <input type="text" id="symbols" name="symbols" required list="symbolList">
+        <datalist id="symbolList"></datalist>
+        <br>
+        <button id="button" name="button" type="submit">Convert</button>
+    </form>
+    <div id="result"></div>
+    <div id="chartContainer">
+        <canvas id="chart" width="1800" height="1800"></canvas>
+    </div>
+    <div id="timeFrameButtons" class="hidden">
+    <button id="fiveDaysButton">5D</button>
+    <button id="fifteenDaysButton">15D</button>
+    <button id="thirtyDaysButton">30D</button>
+    <button id="threeMonthsButton">3M</button>
+    <button id="oneYearButton">1Y</button>
+
+      </div>
+      
+</body>
+<script src="main.js"></script>
+</html>
