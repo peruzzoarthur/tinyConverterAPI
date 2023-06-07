@@ -76,7 +76,7 @@ form.addEventListener('submit', async (event) => {
     }
     hideSpinner();
     timeFrameButtonsDiv.classList.remove('hidden')
-    // Define the event listeners for the time frame buttons
+    
 document.getElementById('fiveDaysButton').addEventListener('click', async () => updateGraph(5));
 document.getElementById('fifteenDaysButton').addEventListener('click', async () => updateGraph(15));
 document.getElementById('thirtyDaysButton').addEventListener('click', async () => updateGraph(30));
@@ -84,8 +84,6 @@ document.getElementById('threeMonthsButton').addEventListener('click', async () 
 document.getElementById('oneYearButton').addEventListener('click', async () => updateGraph(365));
 
 });
-
-// Define the event listeners for the time frame buttons
 
 
 function updateGraph(timeFrame) {
@@ -122,14 +120,12 @@ function updateGraph(timeFrame) {
       })
       .catch((error) => {
         console.error(error);
-        // Hide spinner and display error message
+      
         hideSpinner();
         resultDiv.textContent = 'An error occurred during graph update.';
       });
   }
   
-  
-
 
     async function populateSymbolList() {
         try {
