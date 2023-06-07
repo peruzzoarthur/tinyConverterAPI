@@ -8,7 +8,7 @@ const timeFrameButtonsDiv = document.getElementById('timeFrameButtons');
 timeFrameButtonsDiv.classList.add('hidden');
 
 form.addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
+    event.preventDefault();
 
     const amount = document.getElementById('amount').value;
     const base = document.getElementById('base').value;
@@ -48,7 +48,7 @@ form.addEventListener('submit', async (event) => {
 });
 
 form.addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
+    event.preventDefault();
     showSpinner()
     const amount = document.getElementById('amount').value;
     const base = document.getElementById('base').value;
@@ -87,7 +87,7 @@ document.getElementById('oneYearButton').addEventListener('click', async () => u
 
 
 function updateGraph(timeFrame) {
-    // Show spinner while updating the graph
+   
     showSpinner();
   
     const amount = document.getElementById('amount').value;
@@ -115,7 +115,7 @@ function updateGraph(timeFrame) {
         clearGraph();
         generateGraph(dates, values);
   
-        // Hide spinner after updating the graph
+       
         hideSpinner();
       })
       .catch((error) => {
