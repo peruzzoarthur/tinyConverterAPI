@@ -35,7 +35,6 @@ function getDateNDaysAgo(n = 30) {
     return formattedDate;
   }
   
-
 app.post('/convert5', async (req, res) => {
     try {
        const { amount, base, symbols } = req.body; 
